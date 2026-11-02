@@ -42,12 +42,14 @@ ul {
 
 .seccion1 {
     display: flex;
-    justify-content: space-between;
-    padding: 60px 14.5%;
+    justify-content: space-evenly;
+    padding: 50px 20;
     box-sizing: border-box;
     align-items: center;
+    gap: 60px;
     background-color: #1f2937;
     padding: 40px;
+    
 
     
 }
@@ -75,7 +77,7 @@ ul {
     font-weight: bold;
 }
 
-img {
+.seccion1 img {
     width: 300px;
     height: auto;
     flex-shrink: 0;
@@ -94,6 +96,15 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 200px;
+}
+.item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #3882f6;
+    border-radius: 9px;
+    box-sizing: border-box;
 }
 
 .seccion3 {
@@ -137,7 +148,7 @@ img {
     display: flex;
     justify-content: space-between;
     width: 71%;
-    background-color: #3882f6;
+    background-color: #667da2;
     flex-direction: row;
     padding: 28px 60px;
     border-radius: 5px;
@@ -166,6 +177,7 @@ img {
     flex-direction: row;
     justify-content: center;
     gap: 26px;
+    flex-wrap: wrap;
 }
 
 .box1, .box2, .box3, .box4 {
@@ -173,13 +185,22 @@ img {
     height: 200px;
     border: 2px solid #3882f6;
     border-radius: 9px;
-
 }
+.box1 img,
+.box2 img,
+.box3 img,
+.box4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .texto-explicativo {
-    width: 200px;
+    width: 100px;
     text-align: center;
-    font-size: 10px;
-    margin-top: 5px;
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 1.5;
 }
 .titulo-seccion {
     color: #1f2937;
@@ -195,4 +216,68 @@ img {
 }
 .footer p {
     margin: 0;
+}
+
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 600px) {
+
+    /* ENCABEZADO */
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    /* SECCIÓN 1 */
+    .seccion1 {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 35px 20px;
+    }
+
+    .contenido-seccion1 {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .seccion1 img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    /* SECCIÓN 2 */
+    .box {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .item {
+        width: 85%;
+        max-width: 250px;
+    }
+
+    .item img {
+        width: 100%;
+        height: 200px;
+    }
+
+    /* SECCIÓN 3 */
+    .seccion3 blockquote {
+        width: 85%;
+    }
+
+    /* SECCIÓN 4 */
+    .contenido-seccion4 {
+        flex-direction: column;
+        width: 90%;
+        gap: 25px;
+        padding: 25px 20px;
+    }
+
 }
